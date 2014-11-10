@@ -8,6 +8,9 @@ from django.contrib.auth import login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 
 from main import forms
+from main.models import UserProfile
+
+from django.contrib.auth.models import User
 
 
 def login(request, template_name='base_form.html'):
@@ -57,7 +60,7 @@ def sign_up(request, template_name='base_form.html'):
 
             user = form.save(commit=False)
             user.email = user.username
-            user.profile.phone_number = "085716620"
+            user._phone_number = form.cleaned_data['phone_number']
             user.save()
 
             user.backend = settings.AUTHENTICATION_BACKENDS[0]

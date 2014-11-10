@@ -2028,3 +2028,913 @@ DatabaseError: column main_userprofile.phone_number does not exist
 LINE 1: ..._userprofile"."id", "main_userprofile"."user_id", "main_user...
                                                              ^
 
+[2014-11-04 17:07:32,178] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = "085716620"
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:07:32,178] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = "085716620"
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:12:43,990] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = "085716620"
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:12:43,990] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = "085716620"
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:13:35,245] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = "085716620"
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:13:35,245] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = "085716620"
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:23:40,067] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.phone_number = self.cleaned_data['phone_number']
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:23:40,067] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.phone_number = self.cleaned_data['phone_number']
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:25:04,103] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:25:04,103] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:25:06,820] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:25:06,820] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:31:02,272] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:31:02,272] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:32:17,321] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:32:17,321] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 58, in sign_up
+    user = form.save(commit=False)
+  File "/home/daniel/src/irish-tide-times/app/main/forms.py", line 78, in save
+    user.profile.user = user
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:37:50,899] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.phone_number = request.phone_number
+AttributeError: 'WSGIRequest' object has no attribute 'phone_number'
+[2014-11-04 17:37:50,899] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.phone_number = request.phone_number
+AttributeError: 'WSGIRequest' object has no attribute 'phone_number'
+[2014-11-04 17:38:44,414] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = request.phone_number
+AttributeError: 'WSGIRequest' object has no attribute 'phone_number'
+[2014-11-04 17:38:44,414] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = request.phone_number
+AttributeError: 'WSGIRequest' object has no attribute 'phone_number'
+[2014-11-04 17:40:01,536] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = form.phone_number
+AttributeError: 'UserCreationForm' object has no attribute 'phone_number'
+[2014-11-04 17:40:01,536] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = form.phone_number
+AttributeError: 'UserCreationForm' object has no attribute 'phone_number'
+[2014-11-04 17:44:53,801] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = form.cleaned_data['phone_number']
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:44:53,801] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile.phone_number = form.cleaned_data['phone_number']
+  File "/home/daniel/src/irish-tide-times/app/main/models.py", line 9, in <lambda>
+    User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 146, in get_or_create
+    return self.get_query_set().get_or_create(**kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 499, in get_or_create
+    six.reraise(*exc_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 489, in get_or_create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 1673, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 364, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: NOT NULL constraint failed: main_userprofile.user_id
+[2014-11-04 17:45:50,585] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile = UserProfile()
+NameError: global name 'UserProfile' is not defined
+[2014-11-04 17:45:50,585] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 60, in sign_up
+    user.profile = UserProfile()
+NameError: global name 'UserProfile' is not defined
+[2014-11-04 17:47:13,535] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 62, in sign_up
+    user.profile = UserProfile()
+NameError: global name 'UserProfile' is not defined
+[2014-11-04 17:47:13,535] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 62, in sign_up
+    user.profile = UserProfile()
+NameError: global name 'UserProfile' is not defined
+[2014-11-04 17:47:25,890] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 10, in <module>
+    from main import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-04 17:47:25,890] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 10, in <module>
+    from main import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-04 17:48:12,681] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 49, in sign_up
+    form = forms.UserCreationForm()
+NameError: global name 'forms' is not defined
+[2014-11-04 17:48:12,681] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 49, in sign_up
+    form = forms.UserCreationForm()
+NameError: global name 'forms' is not defined
+[2014-11-04 17:49:33,145] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+    from main import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-04 17:49:33,145] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+    from main import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-04 17:49:45,136] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 63, in sign_up
+    user.profile = UserProfile()
+AttributeError: can't set attribute
+[2014-11-04 17:49:45,136] ERROR Internal Server Error: /signup
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 63, in sign_up
+    user.profile = UserProfile()
+AttributeError: can't set attribute
+[2014-11-05 17:24:00,480] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/admin.py", line 2, in <module>
+    from tide.models import Tide
+ImportError: No module named tide.models
+[2014-11-05 17:24:00,480] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/admin.py", line 2, in <module>
+    from tide.models import Tide
+ImportError: No module named tide.models
+[2014-11-05 17:24:01,655] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/admin.py", line 2, in <module>
+    from tide.models import Tide
+ImportError: No module named tide.models
+[2014-11-05 17:24:01,655] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/admin.py", line 2, in <module>
+    from tide.models import Tide
+ImportError: No module named tide.models
+[2014-11-05 17:24:02,494] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/admin.py", line 2, in <module>
+    from tide.models import Tide
+ImportError: No module named tide.models
+[2014-11-05 17:24:02,494] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/admin.py", line 2, in <module>
+    from tide.models import Tide
+ImportError: No module named tide.models

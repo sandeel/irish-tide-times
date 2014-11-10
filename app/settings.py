@@ -1,7 +1,6 @@
 import os
 import sys
 
-
 PROJECT_ROOT = os.path.dirname(__file__)
 
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
@@ -50,11 +49,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'stripe_demo',
-        'USER': 'potato',
-        'PASSWORD': 'potato',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
     }
 }
 
@@ -158,6 +154,7 @@ INSTALLED_APPS = (
     'django_forms_bootstrap',
 
     'main',
+    'tides',
 )
 
 
