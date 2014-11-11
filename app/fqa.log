@@ -577,3 +577,15 @@ Traceback (most recent call last):
   File "/home/daniel/src/irish-tide-times/app/tides/models.py", line 10, in __str__
     return self.location + " - " + self.date
 TypeError: coercing to Unicode: need string or buffer, datetime.date found
+[2014-11-11 18:09:21,164] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:09:54,885] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:10:50,972] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:11:06,407] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:11:25,116] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:12:07,283] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:13:02,193] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:17:47,804] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:18:50,586] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:19:26,958] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:19:46,814] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 18:19:51,547] INFO Starting new HTTP connection (1): www.irishtimes.com

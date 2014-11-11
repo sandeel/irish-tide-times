@@ -27,10 +27,12 @@ def get_tides():
     soup = BeautifulSoup(data)
 
     locations = {
+                    "Dublin (North Wall)",
                     "Arklow",
                     "Bantry",
                     "Wexford",
     }
+
 
     for td in soup.find_all('td'):
         if td.getText() in locations:
@@ -42,12 +44,17 @@ def get_tides():
             second_low = tds[3].text
             second_high = tds[4].text
 
-            tide = Tide()
-            tide.date = date.today()
-            tide.location = location
-            tide.first_low = first_low
-            tide.first_high = first_high
-            tide.second_low = second_low
-            tide.second_high = second_high
+            results =  Tide.objects.all().filter(location=location,date=date.today())
+            if not results.exists():
+                tide = Tide()
+                tide.date = date.today()
+                tide.location = location
+                tide.first_low = first_low
+                tide.first_high = first_high
+                tide.second_low = second_low
+                tide.second_high = second_high
 
-            tide.save()
+                print "Saving tide for %s" % location
+                tide.save()
+            else:
+                print "Already have tide for %s today" % location
