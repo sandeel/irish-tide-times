@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 
 class UserProfile(models.Model):
     user = models.ForeignKey(User, unique=True)
-    phone_number = models.CharField(max_length=13)
+    phone_number = models.CharField(max_length=13, null=True)
 
 User.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
 

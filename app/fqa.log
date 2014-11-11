@@ -1,0 +1,461 @@
+[2014-11-10 17:02:53,965] ERROR Internal Server Error: /admin/tides/tide/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 372, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 202, in inner
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 25, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 21, in bound_func
+    return func(self, *args2, **kwargs2)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1285, in changelist_view
+    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 90, in __len__
+    self._result_cache = list(self.iterator())
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in iterator
+    for row in compiler.results_iter():
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 775, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 366, in execute
+    six.reraise(utils.DatabaseError, utils.DatabaseError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such column: tides_tide.date
+[2014-11-10 17:02:53,965] ERROR Internal Server Error: /admin/tides/tide/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 372, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 202, in inner
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 25, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 21, in bound_func
+    return func(self, *args2, **kwargs2)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1285, in changelist_view
+    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 90, in __len__
+    self._result_cache = list(self.iterator())
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in iterator
+    for row in compiler.results_iter():
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 775, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 366, in execute
+    six.reraise(utils.DatabaseError, utils.DatabaseError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such column: tides_tide.date
+[2014-11-10 17:05:48,097] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:05:48,097] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:05:50,832] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:05:50,832] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:08:42,677] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:08:42,677] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:08:44,232] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:08:44,232] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:08:45,886] ERROR Internal Server Error: /admin/tides/tide/2/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 372, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:08:45,886] ERROR Internal Server Error: /admin/tides/tide/2/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/options.py", line 372, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 201, in inner
+    return self.login(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 334, in login
+    return login(request, **defaults)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 57, in login
+    current_site = get_current_site(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 95, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sites/models.py", line 26, in get_current
+    current_site = self.get(pk=sid)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 401, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 1}
+[2014-11-10 17:32:55,102] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:34:23,354] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:34:50,422] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:35:07,064] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:35:32,178] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:37:12,352] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:39:28,249] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:40:23,625] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:40:40,614] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:42:16,410] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:47:29,724] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:47:58,748] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:48:27,633] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:48:41,579] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:49:39,188] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:50:03,812] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-10 17:50:25,654] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:55:35,584] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:55:59,324] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:56:54,257] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:57:55,010] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:58:04,659] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:58:30,063] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:59:02,632] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 16:59:39,114] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:00:40,763] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:02:39,252] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:03:02,866] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:04:20,808] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:05:54,737] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:06:24,605] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:06:52,840] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:07:21,388] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:15:29,717] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:17:18,294] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:17:47,521] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:19:34,619] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:19:49,114] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:20:25,203] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:20:53,588] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:21:29,157] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:26:00,763] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:26:57,741] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:29:47,513] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:33:52,835] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:34:31,823] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:34:54,649] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:35:09,973] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:35:35,688] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:36:01,058] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:36:17,589] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:36:44,104] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:37:33,250] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:37:53,068] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:38:09,401] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:39:56,752] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:40:07,526] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:40:17,056] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:41:50,406] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:42:09,754] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:42:17,168] INFO Starting new HTTP connection (1): www.irishtimes.com
