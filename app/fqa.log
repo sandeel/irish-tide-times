@@ -459,3 +459,121 @@ DoesNotExist: Site matching query does not exist. Lookup parameters were {'pk': 
 [2014-11-11 17:41:50,406] INFO Starting new HTTP connection (1): www.irishtimes.com
 [2014-11-11 17:42:09,754] INFO Starting new HTTP connection (1): www.irishtimes.com
 [2014-11-11 17:42:17,168] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-11 17:47:52,379] ERROR Internal Server Error: /admin/tides/tide/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 140, in get_response
+    response = response.render()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 1185, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 286, in result_list
+    'results': list(results(cl))}
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 264, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 256, in __init__
+    super(ResultList, self).__init__(*items)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 184, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/util.py", line 258, in lookup_field
+    value = attr()
+  File "/home/daniel/src/irish-tide-times/app/tides/models.py", line 10, in __str__
+    return self.location + " - " + self.date
+TypeError: coercing to Unicode: need string or buffer, datetime.date found
+[2014-11-11 17:47:52,379] ERROR Internal Server Error: /admin/tides/tide/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 140, in get_response
+    response = response.render()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/response.py", line 82, in rendered_content
+    content = template.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 844, in render_node
+    return node.render(context)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/template/base.py", line 1185, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 286, in result_list
+    'results': list(results(cl))}
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 264, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 256, in __init__
+    super(ResultList, self).__init__(*items)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 184, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/util.py", line 258, in lookup_field
+    value = attr()
+  File "/home/daniel/src/irish-tide-times/app/tides/models.py", line 10, in __str__
+    return self.location + " - " + self.date
+TypeError: coercing to Unicode: need string or buffer, datetime.date found

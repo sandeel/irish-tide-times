@@ -6,6 +6,9 @@ from datetime import date
 
 class Tide(models.Model):
 
+    def __str__(self):
+        return self.location + " - " + self.date.strftime("%B %d, %Y")
+
     date = models.DateField()
     location = models.CharField(max_length=20)
     first_low= models.TimeField()
