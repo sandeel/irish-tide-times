@@ -11,10 +11,10 @@ class Tide(models.Model):
 
     date = models.DateField()
     location = models.CharField(max_length=20)
-    first_low= models.TimeField()
-    first_high= models.TimeField()
-    second_low= models.TimeField()
-    second_high= models.TimeField()
+    first_low= models.TimeField(null=True)
+    first_high= models.TimeField(null=True)
+    second_low= models.TimeField(null=True)
+    second_high= models.TimeField(null=True)
 
 def get_tides():
         
@@ -27,10 +27,35 @@ def get_tides():
     soup = BeautifulSoup(data)
 
     locations = {
-                    "Dublin (North Wall)",
-                    "Arklow",
-                    "Bantry",
-                    "Wexford",
+            "Dublin (North Wall)",
+            "Arklow",
+            "Bantry",
+            "Belfast",
+            "Castletownbere",
+            "Cobh",
+            "Derry",
+            "Dingle",
+            "Dungarvan",
+            "Dun Laoghaire",
+            "Galway",
+            "Greystones",
+            "Howth",
+            "Kilkeel",
+            "Killybegs",
+            "Kinsale",
+            "Larne",
+            "Limerick Docks",
+            "Moville",
+            "Portrush",
+            "Rathmullen",
+            "Schull",
+            "Sligo",
+            "Warrenpoint",
+            "Waterford Bridge",
+            "Westport",
+            "Wexford",
+            "Wicklow",
+            "Youghal",
     }
 
 
@@ -38,7 +63,9 @@ def get_tides():
         if td.getText() in locations:
             tr = td.parent
             tds = tr.find_all('td')
+
             location = tds[0].text
+
             first_low = tds[1].text
             first_high = tds[2].text
             second_low = tds[3].text
@@ -49,12 +76,28 @@ def get_tides():
                 tide = Tide()
                 tide.date = date.today()
                 tide.location = location
-                tide.first_low = first_low
-                tide.first_high = first_high
-                tide.second_low = second_low
-                tide.second_high = second_high
 
-                print "Saving tide for %s" % location
+                if first_low:
+                    tide.first_low = first_low 
+                else:
+                    tide.first_low = None
+
+                if first_high:
+                    tide.first_high = first_high 
+                else:
+                    tide.first_high = None
+
+                if second_low:
+                    tide.second_low = second_low 
+                else:
+                    tide.second_low = None
+
+                if second_high:
+                    tide.second_high = second_high 
+                else:
+                    tide.second_high = None
+
+                print "Saving tide for %s... :)" % location
                 tide.save()
             else:
-                print "Already have tide for %s today" % location
+                print "Already have tide for %s today... :)" % location
