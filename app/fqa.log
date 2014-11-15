@@ -867,3 +867,176 @@ Traceback (most recent call last):
     print request.Body
 AttributeError: 'WSGIRequest' object has no attribute 'Body'
 [2014-11-15 11:34:32,022] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-15 11:43:27,576] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 8, in receive_sms
+    if location in Tide.locations:
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:43:27,576] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 8, in receive_sms
+    if location in Tide.locations:
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:43:54,239] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 9, in receive_sms
+    if location in Tide.locations:
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:43:54,239] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 9, in receive_sms
+    if location in Tide.locations:
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:46:37,547] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    tide = Tide()
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:46:37,547] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    tide = Tide()
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:47:20,246] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    tide = Tide()
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:47:20,246] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    tide = Tide()
+NameError: global name 'Tide' is not defined
+[2014-11-15 11:52:56,375] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 11, in receive_sms
+    if location in Tide.locations.sort():
+AttributeError: 'set' object has no attribute 'sort'
+[2014-11-15 11:52:56,375] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 11, in receive_sms
+    if location in Tide.locations.sort():
+AttributeError: 'set' object has no attribute 'sort'
+[2014-11-15 11:58:59,386] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 11, in receive_sms
+    results =  Tide.objects.all().filter(location=location,date=date.today())
+NameError: global name 'date' is not defined
+[2014-11-15 11:58:59,386] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 11, in receive_sms
+    results =  Tide.objects.all().filter(location=location,date=date.today())
+NameError: global name 'date' is not defined
+[2014-11-15 12:00:11,501] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 11, in receive_sms
+    results =  Tide.objects.all().filter(location=location,date=date.today())
+NameError: global name 'date' is not defined
+[2014-11-15 12:00:11,501] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 11, in receive_sms
+    results =  Tide.objects.all().filter(location=location,date=date.today())
+NameError: global name 'date' is not defined
+[2014-11-15 12:01:35,301] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 22, in receive_sms
+    resp.message(message)
+UnboundLocalError: local variable 'message' referenced before assignment
+[2014-11-15 12:01:35,301] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 22, in receive_sms
+    resp.message(message)
+UnboundLocalError: local variable 'message' referenced before assignment
+[2014-11-15 12:03:32,834] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 13, in receive_sms
+    print results[1]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 215, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2014-11-15 12:03:32,834] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 13, in receive_sms
+    print results[1]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 215, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2014-11-15 12:07:05,784] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 14, in receive_sms
+    message = "Tides for %s at location %s:\n First High: %s" % date.today(),location,tide.first_high
+TypeError: not enough arguments for format string
+[2014-11-15 12:07:05,784] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 14, in receive_sms
+    message = "Tides for %s at location %s:\n First High: %s" % date.today(),location,tide.first_high
+TypeError: not enough arguments for format string
+[2014-11-15 12:13:28,318] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 14, in receive_sms
+    tides.get_tides()
+NameError: global name 'tides' is not defined
+[2014-11-15 12:13:28,318] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 14, in receive_sms
+    tides.get_tides()
+NameError: global name 'tides' is not defined
+[2014-11-15 12:13:54,659] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 15, in receive_sms
+    tides.get_tides()
+AttributeError: 'module' object has no attribute 'get_tides'
+[2014-11-15 12:13:54,659] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 15, in receive_sms
+    tides.get_tides()
+AttributeError: 'module' object has no attribute 'get_tides'
+[2014-11-15 12:14:21,060] INFO Starting new HTTP connection (1): www.irishtimes.com
