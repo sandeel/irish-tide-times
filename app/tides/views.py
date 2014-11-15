@@ -6,7 +6,8 @@ from datetime import date
 
 def receive_sms(request):
     
-    location = request.GET.get('Body', '')
+    location = request.GET.get('Body', '').strip()
+    print location
 
     sorted_locations = sorted(Tide.locations)
     if location in sorted_locations:
