@@ -2,53 +2,82 @@
 
 {% block main_content %}
       <div class="jumbotron">
-        <h1>Text</h2>
+        <h1>Tide times for Ireland</h1>
         <p class="lead">Get tides by text for free. Text your location code to </p>
-        <h1>0857169620</h1>
-        <h2>Location codes</h2>
-        <div id="listContainer">
-            <ul>
-                <li>Dublin</li>
-                <li>Arklow</li>
-                <li>Bantry</li>
-                <li>Belfast</li>
-                <li>Castletownbere</li>
-                <li>Cobh</li>
-                <li>Derry</li>
-                <li>Dingle</li>
-                <li>Dungarvan</li>
-                <li>Dun Laoghaire</li>
-                <li>Galway</li>
-                <li>Greystones</li>
-                <li>Howth</li>
-                <li>Kilkeel</li>
-                <li>Killybegs</li>
-                <li>Kinsale</li>
-                <li>Larne</li>
-                <li>Limerick Docks</li>
-                <li>Moville</li>
-                <li>Portrush</li>
-                <li>Rathmullen</li>
-                <li>Schull</li>
-                <li>Sligo</li>
-                <li>Warrenpoint</li>
-                <li>Waterford</li>
-                <li>Westport</li>
-                <li>Wexford</li>
-                <li>Wicklow</li>
-                <li>Youghal</li>
-            </ul>
-         </div>
+        <h1>+353861800340</h1>
+
+        <div class="bs-example">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#locationCodes">Location Codes</a>
+                        </h4>
+                    </div>
+                    <div id="locationCodes" class="accordion-body collapse">
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Dublin</li>
+                                <li class="list-group-item">Arklow</li>
+                                <li class="list-group-item">Bantry</li>
+                                <li class="list-group-item">Belfast</li>
+                                <li class="list-group-item">Castletownbere</li>
+                                <li class="list-group-item">Cobh</li>
+                                <li class="list-group-item">Derry</li>
+                                <li class="list-group-item">Dingle</li>
+                                <li class="list-group-item">Dungarvan</li>
+                                <li class="list-group-item">Dun Laoghaire</li>
+                                <li class="list-group-item">Galway</li>
+                                <li class="list-group-item">Greystones</li>
+                                <li class="list-group-item">Howth</li>
+                                <li class="list-group-item">Kilkeel</li>
+                                <li class="list-group-item">Killybegs</li>
+                                <li class="list-group-item">Kinsale</li>
+                                <li class="list-group-item">Larne</li>
+                                <li class="list-group-item">Limerick Docks</li>
+                                <li class="list-group-item">Moville</li>
+                                <li class="list-group-item">Portrush</li>
+                                <li class="list-group-item">Rathmullen</li>
+                                <li class="list-group-item">Schull</li>
+                                <li class="list-group-item">Sligo</li>
+                                <li class="list-group-item">Warrenpoint</li>
+                                <li class="list-group-item">Waterford</li>
+                                <li class="list-group-item">Westport</li>
+                                <li class="list-group-item">Wexford</li>
+                                <li class="list-group-item">Wicklow</li>
+                                <li class="list-group-item">Youghal</li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
       </div>
 
-      <div class="jumbotron">
-        <h1>Sign up</h1>
-        <p class="lead">Or sign up to get daily tide reports by text for €1 per month.</p>
-        <p><a class="btn btn-lg btn-success" href="signup" role="button">Sign up</a></p>
-      </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Sign Up</h2>
+                <p class="lead">Or sign up to get daily tide reports by text for €1 per month.</p>
+                <p><a class="btn btn-lg btn-success" href="signup" role="button">Sign up</a></p>
+           </div>
+            <div class="col-md-4">
+              <h2>API</h2>
+                <p class="lead">Use the API to get the tides in JSON format.</p>
+            </div>
+            <div class="col-md-4">
+              <h2>About</h2>
+              <p>About this service.</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+          </div>
 
-      <div class="jumbotron">
-        <h1>API</h1>
-        <p class="lead">Use the API to get the tides in JSON format.</p>
-      </div>
+          <hr>
+
+          <footer>
+            <p>&copy; Sandeel 2014</p>
+          </footer>
+        </div>
+
 {% endblock main_content %}

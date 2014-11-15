@@ -11,15 +11,19 @@
 		<meta name="MobileOptimized" content="980">
 		<meta http-equiv="cleartype" content="on">
 
-		<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/flatly/bootstrap.min.css">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap-responsive.min.css">
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
 		{% block extra_css %}
+
 		{% endblock %}
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	</head>
 
 <body>
@@ -34,9 +38,6 @@
 	</div>
 
 	{% include 'main/_footer.html' %}
-
-
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
 {% block extra_js %}
 {# Need this bit for django-stripe-payments to work with built-in templates #}
@@ -63,7 +64,10 @@
         });
     });
 </script>
+
 {% endblock %}
+
+<!-- Latest compiled and minified JavaScript -->
 
 </body>
 
