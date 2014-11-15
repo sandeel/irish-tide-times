@@ -614,3 +614,256 @@ TypeError: coercing to Unicode: need string or buffer, datetime.date found
 [2014-11-12 17:11:27,154] INFO Starting new HTTP connection (1): www.irishtimes.com
 [2014-11-12 17:23:20,338] INFO Starting new HTTP connection (1): www.irishtimes.com
 [2014-11-12 17:24:26,829] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-12 18:28:55,517] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-12 18:29:01,129] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-12 18:30:46,628] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-15 11:06:33,495] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-15 11:08:33,209] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-15 11:08:43,516] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-15 11:13:11,421] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/urls.py", line 7, in <module>
+    url(r'^home$', views.receive_sms, name="receive_sms"),
+AttributeError: 'module' object has no attribute 'receive_sms'
+[2014-11-15 11:13:11,421] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/urls.py", line 7, in <module>
+    url(r'^home$', views.receive_sms, name="receive_sms"),
+AttributeError: 'module' object has no attribute 'receive_sms'
+[2014-11-15 11:13:11,751] ERROR Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/urls.py", line 7, in <module>
+    url(r'^home$', views.receive_sms, name="receive_sms"),
+AttributeError: 'module' object has no attribute 'receive_sms'
+[2014-11-15 11:13:11,751] ERROR Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/urls.py", line 7, in <module>
+    url(r'^home$', views.receive_sms, name="receive_sms"),
+AttributeError: 'module' object has no attribute 'receive_sms'
+[2014-11-15 11:14:53,310] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/urls.py", line 7, in <module>
+    url(r'^home$', views.receive_sms, name="receive_sms"),
+AttributeError: 'module' object has no attribute 'receive_sms'
+[2014-11-15 11:14:53,310] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/tides/urls.py", line 7, in <module>
+    url(r'^home$', views.receive_sms, name="receive_sms"),
+AttributeError: 'module' object has no attribute 'receive_sms'
+[2014-11-15 11:19:58,115] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:19:58,115] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:21:04,482] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:21:04,482] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:22:19,605] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:22:19,605] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:23:28,501] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:23:28,501] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 7, in receive_sms
+    from_number = request.values.get('From', None)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+[2014-11-15 11:25:37,811] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in get_response
+    response = middleware_method(request, response)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'str' object has no attribute 'status_code'
+[2014-11-15 11:25:37,811] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in get_response
+    response = middleware_method(request, response)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/middleware/common.py", line 106, in process_response
+    if response.status_code == 404:
+AttributeError: 'str' object has no attribute 'status_code'
+[2014-11-15 11:29:13,657] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 13, in receive_sms
+    print request.Body
+AttributeError: 'WSGIRequest' object has no attribute 'Body'
+[2014-11-15 11:29:13,657] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/src/irish-tide-times/app/tides/views.py", line 13, in receive_sms
+    print request.Body
+AttributeError: 'WSGIRequest' object has no attribute 'Body'
+[2014-11-15 11:34:32,022] INFO Starting new HTTP connection (1): www.irishtimes.com

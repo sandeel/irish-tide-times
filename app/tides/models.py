@@ -16,16 +16,6 @@ class Tide(models.Model):
     second_low= models.TimeField(null=True)
     second_high= models.TimeField(null=True)
 
-def get_tides():
-        
-    url = "http://www.irishtimes.com/weather/tides"
-
-    r  = requests.get(url)
-
-    data = r.text
-
-    soup = BeautifulSoup(data)
-
     locations = {
             "Dublin (North Wall)",
             "Arklow",
@@ -59,8 +49,19 @@ def get_tides():
     }
 
 
+
+def get_tides():
+        
+    url = "http://www.irishtimes.com/weather/tides"
+
+    r  = requests.get(url)
+
+    data = r.text
+
+    soup = BeautifulSoup(data)
+
     for td in soup.find_all('td'):
-        if td.getText() in locations:
+        if td.getText() in Tide.locations:
             tr = td.parent
             tds = tr.find_all('td')
 
@@ -101,3 +102,4 @@ def get_tides():
                 tide.save()
             else:
                 print "Already have tide for %s today... :)" % location
+
