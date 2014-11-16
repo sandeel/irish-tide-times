@@ -2938,3 +2938,279 @@ Traceback (most recent call last):
   File "/home/daniel/src/irish-tide-times/app/tides/admin.py", line 2, in <module>
     from tide.models import Tide
 ImportError: No module named tide.models
+[2014-11-16 15:40:47,571] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 8, in <module>
+    (r'', include('main.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/main/urls.py", line 6, in <module>
+    from main.views import payment
+  File "/home/ubuntu/irish-tide-times/app/main/views/payment.py", line 18, in <module>
+    import stripe
+ImportError: No module named stripe
+[2014-11-16 15:40:47,571] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 8, in <module>
+    (r'', include('main.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/main/urls.py", line 6, in <module>
+    from main.views import payment
+  File "/home/ubuntu/irish-tide-times/app/main/views/payment.py", line 18, in <module>
+    import stripe
+ImportError: No module named stripe
+[2014-11-16 15:40:48,413] ERROR Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 8, in <module>
+    (r'', include('main.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/main/urls.py", line 6, in <module>
+    from main.views import payment
+  File "/home/ubuntu/irish-tide-times/app/main/views/payment.py", line 18, in <module>
+    import stripe
+ImportError: No module named stripe
+[2014-11-16 15:40:48,413] ERROR Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 8, in <module>
+    (r'', include('main.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/main/urls.py", line 6, in <module>
+    from main.views import payment
+  File "/home/ubuntu/irish-tide-times/app/main/views/payment.py", line 18, in <module>
+    import stripe
+ImportError: No module named stripe
+[2014-11-16 15:41:48,614] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 8, in <module>
+    (r'', include('main.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/main/urls.py", line 6, in <module>
+    from main.views import payment
+ImportError: cannot import name payment
+[2014-11-16 15:41:48,614] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 8, in <module>
+    (r'', include('main.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/main/urls.py", line 6, in <module>
+    from main.views import payment
+ImportError: cannot import name payment
+[2014-11-16 15:42:14,866] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/tides/urls.py", line 3, in <module>
+    from tides import views
+  File "/home/ubuntu/irish-tide-times/app/tides/views.py", line 2, in <module>
+    import twilio.twiml
+ImportError: No module named twilio.twiml
+[2014-11-16 15:42:14,866] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/tides/urls.py", line 3, in <module>
+    from tides import views
+  File "/home/ubuntu/irish-tide-times/app/tides/views.py", line 2, in <module>
+    import twilio.twiml
+ImportError: No module named twilio.twiml
+[2014-11-16 15:42:16,246] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/tides/urls.py", line 3, in <module>
+    from tides import views
+  File "/home/ubuntu/irish-tide-times/app/tides/views.py", line 2, in <module>
+    import twilio.twiml
+ImportError: No module named twilio.twiml
+[2014-11-16 15:42:16,246] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 9, in <module>
+    (r'', include('tides.urls')),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/tides/urls.py", line 3, in <module>
+    from tides import views
+  File "/home/ubuntu/irish-tide-times/app/tides/views.py", line 2, in <module>
+    import twilio.twiml
+ImportError: No module named twilio.twiml
+[2014-11-16 15:42:47,758] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 12, in <module>
+    url(r"^payments/", include("payments.urls")),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: No module named payments.urls
+[2014-11-16 15:42:47,758] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/ubuntu/irish-tide-times/app/../app/urls.py", line 12, in <module>
+    url(r"^payments/", include("payments.urls")),
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 25, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: No module named payments.urls

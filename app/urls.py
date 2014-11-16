@@ -8,8 +8,6 @@ urlpatterns = patterns(
     (r'', include('main.urls')),
     (r'', include('tides.urls')),
     (r'^admin/', include(admin.site.urls)),
-
-    url(r"^payments/", include("payments.urls")),
 )
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
