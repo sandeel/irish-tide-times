@@ -5,41 +5,14 @@ PROJECT_ROOT = os.path.dirname(__file__)
 
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', '')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
-
 # Secret Stuff
 SECRET_KEY = 'SUPER SECRET HASH VALUE'
 
-# Stripe Keys
-STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", '')
-STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", '')
-
 SSL_URLS = ['/signup', '/login', '/admin', '/subscribe-vanilla', '/subscribe-modal']
-
-# Crispy forms
-CRISPY_TEMPLATE_PACK = 'bootstrap'
-
-# Django Stripe Payments settings
-PAYMENTS_INVOICE_FROM_EMAIL = 'billing@p.ota.to'
-
-
-PAYMENTS_PLANS = {
-    "irish_tide_times_daily": {
-        "stripe_plan_id": "irish_tide_times_daily",
-        "name": "Daily Tide Texts",
-        "description": "Tide times for your location of choice texted to you daily",
-        "price": 1,
-        "currency": "eur",
-        "interval": "month"
-    },
-}
-
 
 # Timezone settings
 TIME_ZONE = 'Europe/London'
 USE_TZ = True
-
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -82,19 +55,10 @@ STATICFILES_FINDERS = (
 )
 
 
-#S3 SETTINGS
-AWS_STORAGE_BUCKET_NAME = 'stripe-django'
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
-
-
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
-
-STATIC_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -144,21 +108,14 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.messages',
 
-    'gunicorn',
     'django_extensions',
-    'storages',
-    'crispy_forms',
     'south',
 
-    'payments',
     'django_forms_bootstrap',
 
     'main',
     'tides',
 )
-
-
-ALLOWED_HOSTS = ['stripe-django-demo.herokuapp.com']
 
 
 #LOGIN URL SETTINGS
@@ -233,5 +190,3 @@ try:
     from local_settings import *
 except ImportError:
     pass
-
-AUTH_PROFILE_MODULE = 'main.UserProfile'

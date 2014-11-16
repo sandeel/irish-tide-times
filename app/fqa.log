@@ -1040,3 +1040,785 @@ Traceback (most recent call last):
     tides.get_tides()
 AttributeError: 'module' object has no attribute 'get_tides'
 [2014-11-15 12:14:21,060] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2014-11-16 14:59:13,061] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/admin.py", line 2, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 14:59:13,061] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/admin.py", line 2, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 15:00:05,947] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/admin.py", line 2, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 15:00:05,947] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/admin.py", line 2, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 15:00:07,187] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/admin.py", line 2, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 15:00:07,187] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/../app/urls.py", line 4, in <module>
+    admin.autodiscover()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/admin.py", line 2, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 15:00:34,251] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 202, in inner
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 361, in index
+    model_dict['admin_url'] = reverse('admin:%s_%s_changelist' % info, current_app=self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 15:00:34,251] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 202, in inner
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 361, in index
+    model_dict['admin_url'] = reverse('admin:%s_%s_changelist' % info, current_app=self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+    from main.models import UserProfile
+ImportError: cannot import name UserProfile
+[2014-11-16 15:01:10,176] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 202, in inner
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 361, in index
+    model_dict['admin_url'] = reverse('admin:%s_%s_changelist' % info, current_app=self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:01:10,176] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 202, in inner
+    return view(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 361, in index
+    model_dict['admin_url'] = reverse('admin:%s_%s_changelist' % info, current_app=self.name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:02:38,368] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 196, in inner
+    if not self.has_permission(request):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 149, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 202, in inner
+    self._setup()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 268, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 134, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 46, in __getitem__
+    return self._session[key]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 168, in _get_session
+    self._session_cache = self.load()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 22, in load
+    self.create()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 30, in create
+    self._session_key = self._get_new_session_key()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 142, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 26, in exists
+    return Session.objects.filter(session_key=session_key).exists()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 608, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 442, in has_results
+    return bool(compiler.execute_sql(SINGLE))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 366, in execute
+    six.reraise(utils.DatabaseError, utils.DatabaseError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: database is locked
+[2014-11-16 15:02:38,368] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 196, in inner
+    if not self.has_permission(request):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 149, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 202, in inner
+    self._setup()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 268, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 134, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 46, in __getitem__
+    return self._session[key]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 168, in _get_session
+    self._session_cache = self.load()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 22, in load
+    self.create()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 30, in create
+    self._session_key = self._get_new_session_key()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 142, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 26, in exists
+    return Session.objects.filter(session_key=session_key).exists()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 608, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/query.py", line 442, in has_results
+    return bool(compiler.execute_sql(SINGLE))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 366, in execute
+    six.reraise(utils.DatabaseError, utils.DatabaseError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: database is locked
+[2014-11-16 15:02:48,121] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 196, in inner
+    if not self.has_permission(request):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 149, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 202, in inner
+    self._setup()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 268, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 134, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 46, in __getitem__
+    return self._session[key]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 168, in _get_session
+    self._session_cache = self.load()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 18, in load
+    expire_date__gt=timezone.now()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 394, in get
+    num = len(clone)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 90, in __len__
+    self._result_cache = list(self.iterator())
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in iterator
+    for row in compiler.results_iter():
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 775, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 366, in execute
+    six.reraise(utils.DatabaseError, utils.DatabaseError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: database is locked
+[2014-11-16 15:02:48,121] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 196, in inner
+    if not self.has_permission(request):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 149, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 202, in inner
+    self._setup()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 268, in _setup
+    self._wrapped = self._setupfunc()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 134, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 46, in __getitem__
+    return self._session[key]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 168, in _get_session
+    self._session_cache = self.load()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 18, in load
+    expire_date__gt=timezone.now()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 394, in get
+    num = len(clone)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 90, in __len__
+    self._result_cache = list(self.iterator())
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/query.py", line 301, in iterator
+    for row in compiler.results_iter():
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 775, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 366, in execute
+    six.reraise(utils.DatabaseError, utils.DatabaseError(*tuple(e.args)), sys.exc_info()[2])
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 362, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: database is locked
+[2014-11-16 15:02:55,588] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:02:55,588] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:03:11,877] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:03:11,877] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:03:51,618] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:03:51,618] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:04:09,406] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:04:09,406] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/daniel/src/irish-tide-times/app/main/views/auth.py", line 11, in <module>
+ImportError: cannot import name UserProfile
+[2014-11-16 15:04:40,487] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 104, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import main.views.auth.sign_up. Parent module main.views.auth does not exist.
+[2014-11-16 15:04:40,487] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 219, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 198, in inner
+    current_app=self.name):
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 467, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 311, in app_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 274, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/utils/functional.py", line 29, in wrapper
+    result = func(*args)
+  File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 104, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import main.views.auth.sign_up. Parent module main.views.auth does not exist.
