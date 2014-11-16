@@ -3,8 +3,6 @@ import sys
 
 PROJECT_ROOT = os.path.dirname(__file__)
 
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
-
 # Secret Stuff
 SECRET_KEY = 'SUPER SECRET HASH VALUE'
 
@@ -13,8 +11,6 @@ SSL_URLS = ['/signup', '/login', '/admin', '/subscribe-vanilla', '/subscribe-mod
 # Timezone settings
 TIME_ZONE = 'Europe/London'
 USE_TZ = True
-
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = []
 
@@ -110,6 +106,7 @@ INSTALLED_APPS = (
 
     'django_extensions',
     'south',
+    'gunicorn',
 
     'main',
     'tides',
@@ -142,7 +139,7 @@ LOGGING = {
         'default': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': 'fqa.log',
+            'filename': '/tmp/fqa.log',
             'maxBytes': 1024 * 1024 * 5,  # 5 MB
             'backupCount': 5,
             'formatter': 'simple',
