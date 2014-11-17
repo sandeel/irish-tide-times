@@ -17,7 +17,7 @@ class Tide(models.Model):
     second_high= models.TimeField(null=True)
 
     locations = {
-            "Dublin",
+            "Dublin (North Wall)",
             "Arklow",
             "Bantry",
             "Belfast",

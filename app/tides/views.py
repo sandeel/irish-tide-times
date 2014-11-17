@@ -10,6 +10,10 @@ def receive_sms(request):
     print location
 
     sorted_locations = sorted(Tide.locations)
+
+    if location == "Dublin":
+	location = "Dublin (North Wall)"
+
     if location in sorted_locations:
         results =  Tide.objects.all().filter(location=location,date=date.today())
         if not results:

@@ -1822,3 +1822,29 @@ Traceback (most recent call last):
   File "/home/daniel/.virtualenvs/stripe-potato/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 104, in get_callable
     (lookup_view, mod_name))
 ViewDoesNotExist: Could not import main.views.auth.sign_up. Parent module main.views.auth does not exist.
+[2014-11-17 17:08:18,823] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: No module named app.urls
+[2014-11-17 17:08:18,823] ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/ubuntu/.virtualenvs/irish-tide-times/local/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: No module named app.urls

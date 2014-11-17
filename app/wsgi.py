@@ -16,8 +16,8 @@ framework.
 import os
 import sys
 
-# add the hellodjango project path into the sys.path
-sys.path.append('/home/ubuntu/irish-tide-times/app')
+# add the project path into the sys.path
+sys.path.append('/home/ubuntu/irish-tide-times')
 
 # add the virtualenv site-packages path to the sys.path
 sys.path.append('/home/ubuntu/.virtualenvs/irish-tide-times/lib/python2.7/site-packages')
