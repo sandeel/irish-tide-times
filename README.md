@@ -1,6 +1,8 @@
 Irish Tide Times
 ==================
 
+Project for Cloud Computing module National College of Ireland. Student no. x11105089
+
 A Django application for a website which offers Irish tide times by SMS.
 
 Installation
