@@ -5,6 +5,8 @@ Project for Cloud Computing module National College of Ireland. Student no. x111
 
 A Django application for a website which offers Irish tide times by SMS.
 
+Themed using Bootstrap.
+
 Installation
 ------------
 
