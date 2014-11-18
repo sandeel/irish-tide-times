@@ -25,7 +25,7 @@ Install pip
 
     sudo easy_install pip
 
-Install the Pythong requirements from requirements.txt
+Install the Python requirements from requirements.txt
 
     sudo pip install Django==1.5 South>=0.7.5 django-extensions==1.2.0 beautifulsoup4 requests twilio gunicorn
 
