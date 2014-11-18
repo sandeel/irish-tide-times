@@ -7,6 +7,13 @@ A Django application for a website which offers Irish tide times by SMS.
 
 Themed using Bootstrap.
 
+View a demo on
+
+[Amazon EC2](http://ec2-54-171-231-83.eu-west-1.compute.amazonaws.com)
+
+[DigitalOcean](http://178.62.76.73)
+
+
 Installation
 ------------
 
