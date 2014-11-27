@@ -12,7 +12,6 @@ BSHCE
 Irish Tide Times
 
 ## Introduction
-**Introduce your project and the rationale for taking on the particular project, in particular discuss the reasons behind selecting the data sources that you selected.**
 
 The aim of the project is to provide an SMS service for retrieving times of high and low tides at specific locations around the country. The service could be used by both professionals and hobbyists who need this information but may not have ready access to mobile internet due to geographic location or weather conditions (anglers, boaters, surfers etc.).
 
@@ -50,13 +49,79 @@ You are required to go into detail, including code snippets of how you have inte
 You are required to go into detail, including code snippets of how you have integrated the data source into your application. All references1 should be provided identifying all suitable sources used for the development of the project.
 
 
-Deployment strategy
+## Deployment Strategy
 This section requires you to discuss the deployment strategy that you have implemented for your project. Discuss both platforms that you have deployed your application onto including a detailed process demonstrating your understanding of the process. 
 
-Platform One
-This sub section should describe the first platform that you have deployed your application onto, including a link to show that you application is still running at the time of the demonstration. If, for some reason that your application will not be running at the time of the presentation you can record you accessing the application through a browser where the location is clearly seen.
+### Amazon EC2
+**This sub section should describe the first platform that you have deployed your application onto, including a link to show that you application is still running at the time of the demonstration. If, for some reason that your application will not be running at the time of the presentation you can record you accessing the application through a browser where the location is clearly seen.""
 
-Platform Two
-This sub section should describe the first platform that you have deployed your application onto, including a link to show that you application is still running at the time of the demonstration. If, for some reason that your application will not be running at the time of the presentation you can record you accessing the application through a browser where the location is clearly seen.
+**http://ec2-54-171-231-83.eu-west-1.compute.amazonaws.com/**
 
+A user account was registered on Amazon AWS using the "free tier".
+
+Ireland was selected as the region for launching instances of servers.
+
+A key pair was created and downloaded to my local machine.
+
+An instance of Ubuntu 14.04 LTS 64bit was launched.
+
+Port 80 was opened to allow demoing of the site (security groups -> settings and added a rule for port 80 allowing traffic)
+
+SSH was used to access the server using the key which was downloaded
+
+    ssh -i aws.pem ubuntu@ec2-54-171-231-83.eu-west-1.compute.amazonaws.com
+
+The installation instructions from README.md in the application's repository were followed (see below).
+
+### Digital Ocean
+
+Signed up to DigitalOcean.
+
+I created a Droplet (instance) (€5 per month tier) calling it "irish-tide-times" and followed the setup wizard.
+
+I chose London as the Region as this was the closest location.
+
+I chose Ubuntu 14.04 64bit as the image.
+
+I added public ssh key of my laptop to the account to allow me to access via ssh
+
+    ssh root@178.62.76.73
+
+I followed the installation instructions from README.md in my application's repository (see below)
+
+### Installation
+
+Install requirements
+
+    sudo apt-get install git nginx python-setuptools python-dev build-essential
+
+Install pip
+
+    sudo easy_install pip
+
+Install the Python requirements from requirements.txt
+
+    sudo pip install Django==1.5 South>=0.7.5 django-extensions==1.2.0 \
+                     beautifulsoup4 requests twilio gunicorn
+
+Clone the repo
+
+    git clone https://github.com/sandeel/irish-tide-times.git
+    cd irish-tide-times
+
+Copy the nginx config file found inside the repo
+
+    sudo cp nginx.conf /etc/nginx/nginx.conf
+
+Make the gunicorn script executable
+
+    cd app
+    sudo chmod +x run_gunicorn.sh 
+
+Edit the following line in the wsgi.py file to point to the absolute location of the irish-tide-times folder
+
+    sys.path.append('/home/ubuntu/irish-tide-times')
+
+run the server
+    ./run_gunicorn.sh
 
