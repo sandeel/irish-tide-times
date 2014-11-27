@@ -32,6 +32,8 @@ The second data source used was the tides page from The Irish Times at http://ww
 ## User Interface Design
 Most of the projects should be using Twitter Bootstrap, which should be described in this sub section. You should include some snapshots of your application.
 
+![imagepath](~/src/irish-tide-times/image.png)
+
 Data Source 1
 You are required to go into detail, including code snippets of how you have integrated the data source into your application. All references should be provided identifying all suitable sources used for the development of the project.
 
