@@ -11,10 +11,6 @@ BSHCE
 ####Application
 Irish Tide Times
 
-
-**This document outlines an overview of the requirements for completing the documentation of the Cloud Computing module on the BSHC degree at the National College of Ireland. The following sections are for guidance purposes and should be used to give you an understanding of the requirements, i.e. you may add to this document. The document is currently using Cambria (Body), font size 12, justified and 1.5 line spacing, which should all be consistent in the final document. The document should describe your project completely using the format below and be a maximum of 3,000 words (excluding code snippets and references).**
-
-
 ## Introduction
 **Introduce your project and the rationale for taking on the particular project, in particular discuss the reasons behind selecting the data sources that you selected.**
 
@@ -27,17 +23,30 @@ A user sends an SMS to a given Irish phone number with their location code, and 
 The second data source used was the tides page from The Irish Times at http://www.irishtimes.com/weather/tides. Due to anecdotal evidence this appears to be the canonical source used by anglers. Having reference these tides myself for many years I know them to be accurate. Secondly, using a well-established and reliable website such as the Irish Times' ensures small chance of the information being unavailable on a given day. The tide information is also presented in plain HTML which proved to be relatively straightforward to parse.
 
 ## Technical Overview
-**This section of the document should describe the data sources in-depth and should be completed to demonstrate how you have used the sources within in your application including sample code snippets.**
 
-## User Interface Design
-Most of the projects should be using Twitter Bootstrap, which should be described in this sub section. You should include some snapshots of your application.
+### User Interface Design
+The choice was made to keep the user interface simple as the main goal of the site is to explain what the service is, give the phone number required as well as the instructions for using it.
 
-![imagepath](~/src/irish-tide-times/image.png)
+Twitter Bootstrap was effective for presenting this information in a clear and concise manner.
 
-Data Source 1
+For the headline of the site, the Bootstrap feature "Jumbotron" was used (figure 1).
+
+![Bootstrap Jumbotron](screen1.png)
+
+On the Jumbotron, the overview of the site and the SMS phone number are clearly displayed, forming a "call to action".
+
+For the list of location codes, Bootstrap's "Accordion" was used (figure 2). This allowed the location codes to be hidden until a user clicks, keeping the site looking uncluttered. When the user clicks again, the accordion closes. The Accordion was useful for displaying the location codes clearly.
+
+![Bootstrap Accordion](screen2.png)
+
+For the About section at the bottom of the page, a Bootstrap column was used to contain the information. Two Bootstrap "glyphicons" were used to highlight the infor,ation points (figure 3).
+
+![Bootstrap Glyphicons](screen3.png)
+
+### Data Source 1
 You are required to go into detail, including code snippets of how you have integrated the data source into your application. All references should be provided identifying all suitable sources used for the development of the project.
 
-Data Source 2
+### Data Source 2
 You are required to go into detail, including code snippets of how you have integrated the data source into your application. All references1 should be provided identifying all suitable sources used for the development of the project.
 
 
