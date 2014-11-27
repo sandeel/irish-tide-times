@@ -4,3 +4,4 @@ django-extensions==1.2.0
 beautifulsoup4
 requests
 twilio
+gunicorn
