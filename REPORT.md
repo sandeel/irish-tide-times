@@ -23,6 +23,8 @@ The second data source used was the tides page from The Irish Times at http://ww
 
 ## Technical Overview
 
+The application was developed in Python using the Django MVC framework as a base.
+
 ### User Interface Design
 The choice was made to keep the user interface simple as the main goal of the site is to explain what the service is, give the phone number required as well as the instructions for using it.
 
@@ -38,22 +40,138 @@ For the list of location codes, Bootstrap's "Accordion" was used (figure 2). Thi
 
 ![Bootstrap Accordion](screen2.png)
 
-For the About section at the bottom of the page, a Bootstrap column was used to contain the information. Two Bootstrap "glyphicons" were used to highlight the infor,ation points (figure 3).
+For the About section at the bottom of the page, a Bootstrap column was used to contain the information. Two Bootstrap "glyphicons" were used to highlight the information points (figure 3).
 
 ![Bootstrap Glyphicons](screen3.png)
 
-### Data Source 1
-You are required to go into detail, including code snippets of how you have integrated the data source into your application. All references should be provided identifying all suitable sources used for the development of the project.
+### Data Source 1: Twilio
 
-### Data Source 2
-You are required to go into detail, including code snippets of how you have integrated the data source into your application. All references1 should be provided identifying all suitable sources used for the development of the project.
+Twilio provides a Python module for Twilio. This is installed simply using
+    
+    pip install twilio
+
+This is then imported into a Python file
+
+    import twilio.twiml
+ 
+This gives us the functionality to create TWIML which is a HTML-like language for speaking to Twilio.
+
+Twilio is given the URL for a callback which is accessed when your chosen phone number receives an SMS. This is implemented in my Django application using a view as follows
+
+    def receive_sms(request):
+    
+        location = request.GET.get('Body', '').strip()
+        print location
+
+        sorted_locations = sorted(Tide.locations)
+
+        if location == "Dublin":
+        location = "Dublin (North Wall)"
+
+        if location in sorted_locations:
+            results =  Tide.objects.all().filter(location=location,date=date.today())
+            if not results:
+                tides.models.get_tides()
+                results =  Tide.objects.all().filter(location=location,date=date.today())
+
+            tide = results[0]
+
+            message = "Tides for %s at location %s\nFirst Low: %s\nFirst High: %s\nSecond Low: %s\nSecond High: %s" % (
+                date.today(), location, tide.first_low, tide.first_high, tide.second_low, tide.second_high)
+        else:
+            message = "Sorry, can't find tides for that location code. Available location codes are:\n"
+            for location in sorted_locations:
+                message += "%s,\n" % location
+
+        resp = twilio.twiml.Response()
+        resp.message(message)
+
+        return HttpResponse(resp, content_type='text/xml')
+
+This code
+
+* finds the location code given in the SMS
+* strips any blank spaces
+* checks location code is valid
+* finds tides for the given location
+* creates a TWIML response
+* creates a message for response
+* returns the response
+
+
+### Data Source 2: Irish Times website
+
+The URL http://www.irishtimes.com/weather/tides is scraped for the purpose of gathering tide data. This is implemented using a Python library called BeautifulSoup. The library is intalled using
+
+    pip install bs4
+
+It is imported into a Python file using
+
+    from bs4 import BeautifulSoup
+
+The following code is used to scrape the web page
+
+    def get_tides():
+        
+        url = "http://www.irishtimes.com/weather/tides"
+
+        r  = requests.get(url)
+
+        data = r.text
+
+        soup = BeautifulSoup(data)
+
+        for td in soup.find_all('td'):
+            if td.getText() in Tide.locations:
+                tr = td.parent
+                tds = tr.find_all('td')
+
+                location = tds[0].text
+
+                first_low = tds[1].text
+                first_high = tds[2].text
+                second_low = tds[3].text
+                second_high = tds[4].text
+
+                results =  Tide.objects.all().filter(location=location,date=date.today())
+                if not results.exists():
+                    tide = Tide()
+                    tide.date = date.today()
+                    tide.location = location
+
+                    if first_low:
+                        tide.first_low = first_low 
+                    else:
+                        tide.first_low = None
+
+                    if first_high:
+                        tide.first_high = first_high 
+                    else:
+                        tide.first_high = None
+
+                    if second_low:
+                        tide.second_low = second_low 
+                    else:
+                        tide.second_low = None
+
+                    if second_high:
+                        tide.second_high = second_high 
+                    else:
+                        tide.second_high = None
+
+                    print "Saving tide for %s... :)" % location
+                    tide.save()
+                else:
+                    print "Already have tide for %s today... :)" % location
+
+The above code converts the HTML into a BeautifulSoup-parseable object and then traverses the relevent elements to gather tide information. Each "tide" is then stored as an object and then persisted to the database using
+
+    tide.save()
 
 
 ## Deployment Strategy
-This section requires you to discuss the deployment strategy that you have implemented for your project. Discuss both platforms that you have deployed your application onto including a detailed process demonstrating your understanding of the process. 
 
 ### Amazon EC2
-**This sub section should describe the first platform that you have deployed your application onto, including a link to show that you application is still running at the time of the demonstration. If, for some reason that your application will not be running at the time of the presentation you can record you accessing the application through a browser where the location is clearly seen.""
 
 **http://ec2-54-171-231-83.eu-west-1.compute.amazonaws.com/**
 
@@ -74,6 +192,8 @@ SSH was used to access the server using the key which was downloaded
 The installation instructions from README.md in the application's repository were followed (see below).
 
 ### Digital Ocean
+
+**http://178.62.76.73/**
 
 Signed up to DigitalOcean.
 
