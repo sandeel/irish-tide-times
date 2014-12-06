@@ -1,29 +1,33 @@
-Cloud Computing Project Report
+Cloud Computing Project Report: Irish Tide Times - Daniel Feely x11105089
 ==============================
 
-
-####Student No.
-x11105089
-
-####Course
-BSHCE
-
-####Application
-Irish Tide Times
-
 ## Introduction
+
+The project is hosted at
+
+**https://github.com/sandeel/irish-tide-times**
 
 The aim of the project is to provide an SMS service for retrieving times of high and low tides at specific locations around the country. The service could be used by both professionals and hobbyists who need this information but may not have ready access to mobile internet due to geographic location or weather conditions (anglers, boaters, surfers etc.).
 
 A user sends an SMS to a given Irish phone number with their location code, and the times for first low, first high, second low and second high tides are sent in a reply SMS to the user. If an erroneous location is given, the reply instead gives a list of possible location codes.
 
-**Twilio** (https://www.twilio.com/) is used to provide the phone number and to handle incoming SMS. Twilio was chosen for several reasons. First, the documentation available for Twilio is second to none. Clear example of how to implement the API are given for a variety of different programming languages and frameworks. Twilio also proved to have excellent customer service and were helpfully able to supply a "beta" Irish telephone number which could handle SMS (this was important as it would be unfeasible if users had to sent an SMS to a UK number, incurring a cost). Another reason Twilio was used was that it did not prove to be cost-prohibitive, with both receiving and sending SMS costing a fraction of a cent. A Twilio account also provides useful records of each SMS sent and received, as well as affording flexibility in how incoming SMS are handled (eg. limiting the number of SMS per day and so on).
+The phone number to text to try the application is **+353 86 1800 340**.
 
-The second data source used was the tides page from The Irish Times at http://www.irishtimes.com/weather/tides. Due to anecdotal evidence this appears to be the canonical source used by anglers. Having reference these tides myself for many years I know them to be accurate. Secondly, using a well-established and reliable website such as the Irish Times' ensures small chance of the information being unavailable on a given day. The tide information is also presented in plain HTML which proved to be relatively straightforward to parse.
+**Twilio** (https://www.twilio.com/) is used to provide the phone number and to handle incoming SMS. Twilio was chosen for several reasons.
+
+Firstly, the documentation available for Twilio is second to none. Clear examples of how to implement the API are given for a variety of different programming languages and frameworks. Twilio also proved to have excellent customer service and were helpfully able to supply a "beta" Irish telephone number which could handle SMS (this was important as it would be unfeasible if users had to sent an SMS to a UK number, incurring a cost).
+
+Another reason Twilio was selected was that it did not prove to be cost-prohibitive, with both receiving and sending SMS costing a fraction of a cent. A Twilio account also provides useful records of each SMS sent and received, as well as affording flexibility in how incoming SMS are handled (eg. limiting the number of SMS per day and so on).
+
+The second data source used was the tides page from The Irish Times at http://www.irishtimes.com/weather/tides.
+
+Due to anecdotal evidence this site appears to be the canonical source used by anglers. Having reference these tides myself for many years I know them to be accurate.
+
+Secondly, using a well-established and reliable website such as the Irish Times' ensures small chance of the information being unavailable on a given day. The tide information is also presented in plain HTML which proved to be relatively straightforward to parse.
 
 ## Technical Overview
 
-The application was developed in Python using the Django MVC framework as a base.
+The application was developed in Python using the Django MVC framework as a base (https://www.djangoproject.com/).
 
 ### User Interface Design
 The choice was made to keep the user interface simple as the main goal of the site is to explain what the service is, give the phone number required as well as the instructions for using it.
@@ -56,12 +60,13 @@ This is then imported into a Python file
  
 This gives us the functionality to create TWIML which is a HTML-like language for speaking to Twilio.
 
-Twilio is given the URL for a callback which is accessed when your chosen phone number receives an SMS. This is implemented in my Django application using a view as follows
+Twilio is given the URL for a callback which is accessed when your chosen phone number receives an SMS.
+
+This is implemented in my Django application using a view as follows
 
     def receive_sms(request):
     
         location = request.GET.get('Body', '').strip()
-        print location
 
         sorted_locations = sorted(Tide.locations)
 
@@ -69,17 +74,32 @@ Twilio is given the URL for a callback which is accessed when your chosen phone 
         location = "Dublin (North Wall)"
 
         if location in sorted_locations:
-            results =  Tide.objects.all().filter(location=location,date=date.today())
+            results = 
+                Tide.objects.all().filter(location=location,date=date.today())
+
             if not results:
                 tides.models.get_tides()
-                results =  Tide.objects.all().filter(location=location,date=date.today())
+
+                results = 
+                     Tide.objects.all().filter(location=location,date=date.today())
 
             tide = results[0]
 
-            message = "Tides for %s at location %s\nFirst Low: %s\nFirst High: %s\nSecond Low: %s\nSecond High: %s" % (
-                date.today(), location, tide.first_low, tide.first_high, tide.second_low, tide.second_high)
+            message = "Tides for %s at location %s\n
+                       First Low: %s\n
+                       First High: %s\n
+                       Second Low: %s\n
+                       Second High: %s" % (
+                           date.today(),
+                           location,
+                           tide.first_low,
+                           tide.first_high,
+                           tide.second_low,
+                           tide.second_high
+                       )
         else:
-            message = "Sorry, can't find tides for that location code. Available location codes are:\n"
+            message = "Sorry, can't find tides for that location code.
+                      Available location codes are:\n"
             for location in sorted_locations:
                 message += "%s,\n" % location
 
@@ -88,7 +108,7 @@ Twilio is given the URL for a callback which is accessed when your chosen phone 
 
         return HttpResponse(resp, content_type='text/xml')
 
-This code
+This code does the following:
 
 * finds the location code given in the SMS
 * strips any blank spaces
@@ -97,6 +117,20 @@ This code
 * creates a TWIML response
 * creates a message for response
 * returns the response
+
+A sample of the TWIML response looks like as follows
+
+    <Response>
+        <Message>
+            <Body>
+                Tide times for Wexford on 2014-12-6
+                00:11
+                06:16
+                12:41
+                18:43
+            </Body>
+        </Message>
+    </Response>
 
 
 ### Data Source 2: Irish Times website
@@ -133,7 +167,9 @@ The following code is used to scrape the web page
                 second_low = tds[3].text
                 second_high = tds[4].text
 
-                results =  Tide.objects.all().filter(location=location,date=date.today())
+                results =
+                    Tide.objects.all().filter(location=location,date=date.today())
+
                 if not results.exists():
                     tide = Tide()
                     tide.date = date.today()
@@ -209,7 +245,7 @@ I added public ssh key of my laptop to the account to allow me to access via ssh
 
 I followed the installation instructions from README.md in my application's repository (see below)
 
-### Installation
+### Installation Instructions
 
 Install requirements
 
