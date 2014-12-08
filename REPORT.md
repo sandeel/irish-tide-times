@@ -123,11 +123,11 @@ A sample of the TWIML response looks like as follows
     <Response>
         <Message>
             <Body>
-                Tide times for Wexford on 2014-12-6
-                00:11
-                06:16
-                12:41
-                18:43
+                Tide times for Wexford on 2014-12-06
+                First Low: 00:11
+                First High: 06:16
+                Second Low: 12:41
+                Second High: 18:43
             </Body>
         </Message>
     </Response>
