@@ -19,14 +19,14 @@ def receive_sms(request):
 
     sorted_locations = sorted(Tide.locations)
 
-    if location == "Dublin":
+    if location.lower() == "dublin":
         location = "Dublin (North Wall)"
 
-    if location in sorted_locations:
+    if location.lower() in ([x.lower() for x in sorted_locations]):
         results =  Tide.objects.all().filter(location=location,date=date.today())
         if not results:
             tides.models.get_tides()
-            results =  Tide.objects.all().filter(location=location,date=date.today())
+            results =  Tide.objects.all().filter(location=location.lower(),date=date.today())
 
         tide = results[0]
 

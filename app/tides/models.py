@@ -76,7 +76,7 @@ def get_tides():
             if not results.exists():
                 tide = Tide()
                 tide.date = date.today()
-                tide.location = location
+                tide.location = location.lower()
 
                 if first_low:
                     tide.first_low = first_low 

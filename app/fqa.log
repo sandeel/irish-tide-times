@@ -8831,3 +8831,426 @@ Traceback (most recent call last):
   File "/root/irish-tide-times/app/main/urls.py", line 8, in <module>
     url(r'', views.LandingPageView.as_view(), name='index'),
 AttributeError: 'module' object has no attribute 'LandingPageView'
+[2015-02-13 06:43:00,976] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:50:51,918] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:50:52,366] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:50:52,366] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:50:53,121] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:50:53,525] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:50:53,525] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:52:04,204] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 364, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/root/irish-tide-times/app/main/urls.py", line 3, in <module>
+    from tides import views
+  File "/root/irish-tide-times/app/tides/views.py", line 25
+    if location.lower() in ([x.lower() for x in sorted_locations)]:
+                                                                ^
+SyntaxError: invalid syntax
+[2015-02-13 06:52:04,204] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 364, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/root/irish-tide-times/app/main/urls.py", line 3, in <module>
+    from tides import views
+  File "/root/irish-tide-times/app/tides/views.py", line 25
+    if location.lower() in ([x.lower() for x in sorted_locations)]:
+                                                                ^
+SyntaxError: invalid syntax
+[2015-02-13 06:52:04,897] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 364, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/root/irish-tide-times/app/main/urls.py", line 3, in <module>
+    from tides import views
+  File "/root/irish-tide-times/app/tides/views.py", line 25
+    if location.lower() in ([x.lower() for x in sorted_locations)]:
+                                                                ^
+SyntaxError: invalid syntax
+[2015-02-13 06:52:04,897] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 364, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/middleware/common.py", line 72, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 619, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 494, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/root/irish-tide-times/app/main/urls.py", line 3, in <module>
+    from tides import views
+  File "/root/irish-tide-times/app/tides/views.py", line 25
+    if location.lower() in ([x.lower() for x in sorted_locations)]:
+                                                                ^
+SyntaxError: invalid syntax
+[2015-02-13 06:52:37,945] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:52:38,205] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:52:38,205] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:52:38,880] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:52:39,079] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:52:39,079] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:56:10,214] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: tides_tide
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 27, in receive_sms
+    if not results:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 122, in __len__
+    self._fetch_all()
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 700, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: tides_tide
+[2015-02-13 06:56:10,214] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: tides_tide
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 27, in receive_sms
+    if not results:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 122, in __len__
+    self._fetch_all()
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 700, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: tides_tide
+[2015-02-13 06:56:11,132] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: tides_tide
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 27, in receive_sms
+    if not results:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 122, in __len__
+    self._fetch_all()
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 700, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: tides_tide
+[2015-02-13 06:56:11,132] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: tides_tide
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 27, in receive_sms
+    if not results:
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 122, in __len__
+    self._fetch_all()
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 966, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 265, in iterator
+    for row in compiler.results_iter():
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 700, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 485, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: tides_tide
+[2015-02-13 06:56:56,513] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:57:06,075] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:57:06,809] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:57:06,809] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:57:07,438] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 06:57:07,942] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:57:07,942] ERROR Internal Server Error: /receive_sms
+Traceback (most recent call last):
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/irish-tide-times/app/tides/views.py", line 31, in receive_sms
+    tide = results[0]
+  File "/root/.virtualenvs/irish-tide-times/lib/python3.4/site-packages/django/db/models/query.py", line 177, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+[2015-02-13 06:58:11,519] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 07:01:02,130] INFO Starting new HTTP connection (1): www.irishtimes.com
+[2015-02-13 07:01:30,356] INFO Starting new HTTP connection (1): www.irishtimes.com
