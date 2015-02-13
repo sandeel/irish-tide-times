@@ -1,6 +1,6 @@
-Django==1.5
-South>=0.7.5
-django-extensions==1.2.0
+Django
+South
+django-extensions
 beautifulsoup4
 requests
 twilio

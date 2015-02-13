@@ -98,8 +98,8 @@ def get_tides():
                 else:
                     tide.second_high = None
 
-                print "Saving tide for %s... :)" % location
+                print("Saving tide for ",location,"... :)")
                 tide.save()
             else:
-                print "Already have tide for %s today... :)" % location
+                print("Already have tide for ",location," today... :)")
 

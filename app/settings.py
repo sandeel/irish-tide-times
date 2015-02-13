@@ -88,7 +88,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-ROOT_URLCONF = 'app.urls'
+ROOT_URLCONF = 'main.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, "templates"),
@@ -105,7 +105,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
 
     'django_extensions',
-    'south',
     'gunicorn',
 
     'main',
