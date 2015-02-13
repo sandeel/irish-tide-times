@@ -3,6 +3,15 @@ import twilio.twiml
 import tides.models
 from .models import Tide
 from datetime import date
+from django.views import generic
+
+class HomePageView(generic.TemplateView):
+    """"""
+    template_name = 'main/home.html'
+
+class LandingPageView(generic.TemplateView):
+    """"""
+    template_name = 'main/landing_page.html'
 
 def receive_sms(request):
     
@@ -11,7 +20,7 @@ def receive_sms(request):
     sorted_locations = sorted(Tide.locations)
 
     if location == "Dublin":
-	location = "Dublin (North Wall)"
+        location = "Dublin (North Wall)"
 
     if location in sorted_locations:
         results =  Tide.objects.all().filter(location=location,date=date.today())

@@ -1,10 +1,13 @@
-from django.contrib.auth.decorators import login_required
-
-from django.conf.urls import patterns, url
-
-from main import views
+from django.conf.urls import *
+from django.contrib import admin
+from tides import views
+admin.autodiscover()
 
 urlpatterns = patterns(
-    'main.views',
-    url(r'^$', views.landing, name="landing_page"),
+    (r'^admin/', include(admin.site.urls)),
+    url('/?^$', views.LandingPageView.as_view(), name='index'),
+    url(r'^receive_sms$', views.receive_sms, name="receive_sms"),
 )
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()

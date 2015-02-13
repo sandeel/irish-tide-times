@@ -17,10 +17,10 @@ import os
 import sys
 
 # add the project path into the sys.path
-sys.path.append('/home/ubuntu/irish-tide-times')
+sys.path.append('/root/irish-tide-times/')
 
 # add the virtualenv site-packages path to the sys.path
-sys.path.append('/home/ubuntu/.virtualenvs/irish-tide-times/lib/python2.7/site-packages')
+#sys.path.append('/home/ubuntu/.virtualenvs/irish-tide-times/lib/python2.7/site-packages')
 
 # We defer to a DJANGO_SETTINGS_MODULE already in the environment. This breaks
 # if running multiple sites in the same mod_wsgi process. To fix this, use
