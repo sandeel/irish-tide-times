@@ -13,6 +13,7 @@ Installation
 
 Install requirements
 
+    sudo apt-get update
     sudo apt-get install git nginx python-setuptools python-dev build-essential
 
 Install pip
