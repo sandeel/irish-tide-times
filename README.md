@@ -14,11 +14,7 @@ Installation
 Install requirements
 
     sudo apt-get update
-    sudo apt-get install git nginx python-setuptools python-dev build-essential
-
-Install pip
-
-    sudo easy_install pip
+    sudo apt-get install git nginx python-setuptools python-dev build-essential python-pip
 
 Install the Python requirements from requirements.txt
 
