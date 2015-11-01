@@ -16,14 +16,14 @@ Install requirements
     sudo apt-get update
     sudo apt-get install git nginx python-setuptools python-dev build-essential python-pip
 
-Install the Python requirements from requirements.txt
-
-    sudo pip install Django==1.5 South>=0.7.5 django-extensions==1.2.0 beautifulsoup4 requests twilio gunicorn
-
 Clone the repo
 
     git clone https://github.com/sandeel/irish-tide-times.git
     cd irish-tide-times
+    
+Install the Python requirements from requirements.txt
+
+    sudo pip install -r requirements.txt
 
 Copy the nginx config file found inside the repo
 
