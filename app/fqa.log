@@ -9296,3 +9296,45 @@ TemplateDoesNotExist: main/_footer.html
 [2016-02-02 19:51:25,467] WARNING /home/local/ANT/feelyd/projects/irish-tide-times/app/main/urls.py:9: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
   url(r'^receive_sms$', views.receive_sms, name="receive_sms"),
 
+[2016-02-02 19:54:45,729] WARNING /tmp/itt/local/lib/python2.7/site-packages/django/template/utils.py:37: RemovedInDjango110Warning: You haven't defined a TEMPLATES setting. You must do so before upgrading to Django 1.10. Otherwise Django will be unable to load templates.
+  "unable to load templates.", RemovedInDjango110Warning)
+
+[2016-02-02 19:54:45,734] WARNING /home/local/ANT/feelyd/projects/irish-tide-times/app/main/urls.py:9: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^receive_sms$', views.receive_sms, name="receive_sms"),
+
+[2016-02-02 19:54:53,486] WARNING /tmp/itt/local/lib/python2.7/site-packages/django/template/utils.py:37: RemovedInDjango110Warning: You haven't defined a TEMPLATES setting. You must do so before upgrading to Django 1.10. Otherwise Django will be unable to load templates.
+  "unable to load templates.", RemovedInDjango110Warning)
+
+[2016-02-02 19:54:53,492] WARNING /home/local/ANT/feelyd/projects/irish-tide-times/app/main/urls.py:9: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^receive_sms$', views.receive_sms, name="receive_sms"),
+
+[2016-02-02 19:55:01,866] WARNING /usr/lib/python2.7/importlib/__init__.py:37: RemovedInDjango110Warning: django.core.context_processors is deprecated in favor of django.template.context_processors.
+  __import__(name)
+
+[2016-02-02 19:55:01,879] WARNING Exception raised while rendering {% include %} for template 'main/landing_page.html'. Empty string rendered instead.
+Traceback (most recent call last):
+  File "/tmp/itt/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 200, in render
+    template = context.template.engine.get_template(template_name)
+  File "/tmp/itt/local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/tmp/itt/local/lib/python2.7/site-packages/django/template/engine.py", line 169, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+TemplateDoesNotExist: main/_footer.html
+[2016-02-02 19:57:53,158] WARNING /tmp/itt/local/lib/python2.7/site-packages/django/template/utils.py:37: RemovedInDjango110Warning: You haven't defined a TEMPLATES setting. You must do so before upgrading to Django 1.10. Otherwise Django will be unable to load templates.
+  "unable to load templates.", RemovedInDjango110Warning)
+
+[2016-02-02 19:57:53,163] WARNING /home/local/ANT/feelyd/projects/irish-tide-times/app/main/urls.py:9: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^receive_sms$', views.receive_sms, name="receive_sms"),
+
+[2016-02-02 19:58:03,592] WARNING /usr/lib/python2.7/importlib/__init__.py:37: RemovedInDjango110Warning: django.core.context_processors is deprecated in favor of django.template.context_processors.
+  __import__(name)
+
+[2016-02-02 19:58:03,599] WARNING Exception raised while rendering {% include %} for template 'main/landing_page.html'. Empty string rendered instead.
+Traceback (most recent call last):
+  File "/tmp/itt/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 200, in render
+    template = context.template.engine.get_template(template_name)
+  File "/tmp/itt/local/lib/python2.7/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/tmp/itt/local/lib/python2.7/site-packages/django/template/engine.py", line 169, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+TemplateDoesNotExist: main/_footer.html

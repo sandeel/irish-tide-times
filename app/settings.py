@@ -105,7 +105,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
 
     'django_extensions',
-    'gunicorn',
 
     'main',
     'tides',
