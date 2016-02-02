@@ -106,7 +106,7 @@ INSTALLED_APPS = (
 
     'django_extensions',
 
-    'app',
+    'main',
     'tides',
 )
 
