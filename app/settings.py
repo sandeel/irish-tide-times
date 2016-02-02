@@ -116,59 +116,6 @@ LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/login'
 LOGOUT_URL = '/logout'
 
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
-        },
-        'simple': {
-            'format': '[%(asctime)s] %(levelname)s %(message)s'
-        },
-    },
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-    'handlers': {
-        'default': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': 'fqa.log',
-            'maxBytes': 1024 * 1024 * 5,  # 5 MB
-            'backupCount': 5,
-            'formatter': 'simple',
-        },
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            # 'class': 'ssweb.logger.FQAdminEmailHandler',
-            'class': 'logging.StreamHandler',
-        },
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple',
-            'stream': sys.stdout,
-        },
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins', 'console', 'default'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-        '': {
-            'handlers': ['default', 'console'],
-            'level': 'INFO',
-            'propagate': True
-        },
-    }
-}
-
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
