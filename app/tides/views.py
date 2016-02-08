@@ -13,8 +13,19 @@ class LandingPageView(generic.TemplateView):
     """"""
     template_name = 'main/landing_page.html'
 
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(generic.TemplateView, self).get_context_data(**kwargs)
+        context['locations'] = sorted(Tide.locations)
+        results =  Tide.objects.all()
+        if not results:
+            tides.models.get_tides()
+            results =  Tide.objects.all()
+        context['results'] = results
+        return context
+
 def receive_sms(request):
-    
+
     location = request.GET.get('Body', '').strip()
 
     sorted_locations = sorted(Tide.locations)

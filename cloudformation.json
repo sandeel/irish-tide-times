@@ -178,7 +178,7 @@
             "Type" : "AWS::EC2::Instance",
             "Properties" :
             {
-                "ImageId" : "ami-184dc970",
+                "ImageId" : "ami-14913f63",
                 "InstanceType" : "t2.micro",
                 "SourceDestCheck" : "false",
                 "SubnetId" : { "Ref" : "PublicSubnet1" },
@@ -220,7 +220,7 @@
                           },
                           {
                             "Namespace": "aws:elasticbeanstalk:application:environment",
-                            "OptionName": "RDS_ENDPOINT",
+                            "OptionName": "DB_HOST",
                             "Value": {
                               "Fn::GetAtt" : [ "DB" , "Endpoint.Address" ]
                             }
@@ -241,7 +241,7 @@
         "DB" : {
            "Type" : "AWS::RDS::DBInstance",
            "Properties" : {
-               "AllocatedStorage" : "10",
+              "AllocatedStorage" : "10",
               "DBName" : "itt",
               "DBInstanceClass" : "db.t2.micro",
               "Engine" : "MySQL",
@@ -249,6 +249,161 @@
               "MasterUsername" : "itt",
               "MasterUserPassword" : { "Ref" : "DBPass" }
            }
-        }
+        },
+        "CodePipelineS3Bucket" : {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "VersioningConfiguration" : { "Status" : "Enabled" }
+            }
+        },
+        "CodePipelineServiceRole": {
+                 "Type": "AWS::IAM::Role",
+                 "Properties": {
+                    "AssumeRolePolicyDocument": {
+                       "Version" : "2012-10-17",
+                       "Statement": [ {
+                          "Effect": "Allow",
+                          "Principal": {
+                             "Service": [ "codepipeline.amazonaws.com" ]
+                          },
+                          "Action": [ "sts:AssumeRole" ]
+                       } ]
+                    },
+                    "Path": "/",
+                    "Policies": [ {
+                       "PolicyName": "xgpCodePipelineServiceRole",
+                       "PolicyDocument": {
+                          "Version" : "2012-10-17",
+                          "Statement": [
+                              {
+                                "Action": [
+                                  "s3:GetObject",
+                                  "s3:GetObjectVersion",
+                                  "s3:GetBucketVersioning"
+                                ],
+                                "Resource": "*",
+                                "Effect": "Allow"
+                              },
+                              {
+                                "Action": [
+                                  "s3:PutObject"
+                                ],
+                                "Resource": [
+                                  "arn:aws:s3:::codepipeline*",
+                                  "arn:aws:s3:::elasticbeanstalk*"
+                                ],
+                                "Effect": "Allow"
+                              },
+                              {
+                                "Action": [
+                                  "codedeploy:CreateDeployment",
+                                  "codedeploy:GetApplicationRevision",
+                                  "codedeploy:GetDeployment",
+                                  "codedeploy:GetDeploymentConfig",
+                                  "codedeploy:RegisterApplicationRevision"
+                                ],
+                                "Resource": "*",
+                                "Effect": "Allow"
+                              },
+                              {
+                                "Action": [
+                                  "elasticbeanstalk:*",
+                                  "ec2:*",
+                                  "elasticloadbalancing:*",
+                                  "autoscaling:*",
+                                  "cloudwatch:*",
+                                  "s3:*",
+                                  "sns:*",
+                                  "cloudformation:*",
+                                  "rds:*",
+                                  "sqs:*",
+                                  "ecs:*",
+                                  "iam:PassRole"
+                                ],
+                                "Resource": "*",
+                                "Effect": "Allow"
+                              },
+                              {
+                                "Action": [
+                                  "lambda:InvokeFunction",
+                                  "lambda:ListFunctions"
+                                ],
+                                "Resource": "*",
+                                "Effect": "Allow"
+                              }
+                            ]
+                       }
+                       } ]
+                    }
+              },
+          "AppPipeline": {
+            "Type": "AWS::CodePipeline::Pipeline",
+            "DependsOn" : "ProdEnv",
+            "Properties": {
+              "RoleArn": { "Fn::GetAtt" : [ "CodePipelineServiceRole", "Arn" ] },
+              "Stages": [
+                {
+                  "Name": "Source",
+                  "Actions": [
+                    {
+                      "Name": "SourceAction",
+                      "ActionTypeId": {
+                        "Category": "Source",
+                        "Owner": "ThirdParty",
+                        "Version": "1",
+                        "Provider": "GitHub"
+                      },
+                      "OutputArtifacts": [
+                        {
+                          "Name": "SourceOutput"
+                        }
+                      ],
+                      "Configuration": {
+                        "Owner" : "sandeel",
+                        "Repo" : "irish-tide-times",
+                        "Branch" : "master",
+                        "OAuthToken" : "7bd24b616f69894001169c0c897a31e225b7cc0f"
+                      },
+                      "RunOrder": 1
+                    }
+                  ]
+                },
+                {
+                  "Name": "Prod",
+                  "Actions": [
+                    {
+                      "Name": "ProdAction",
+                      "InputArtifacts": [
+                        {
+                          "Name": "SourceOutput"
+                        }
+                      ],
+                      "ActionTypeId": {
+                        "Category": "Deploy",
+                        "Owner": "AWS",
+                        "Version": "1",
+                        "Provider": "ElasticBeanstalk"
+                      },
+                      "Configuration": {
+                        "ApplicationName": {"Ref" : "ElasticBeanstalkApplication"},
+                        "EnvironmentName" : { "Ref" : "ProdEnv" }
+                      },
+                      "RunOrder": 1
+                    }
+                  ]
+                }
+              ],
+              "ArtifactStore": {
+                "Type": "S3",
+                "Location": { "Ref" : "CodePipelineS3Bucket" }
+              },
+              "DisableInboundStageTransitions": [
+                {
+                  "StageName": "Prod",
+                  "Reason": "Disabling the transition until integration tests are completed"
+                }
+              ]
+            }
+          }
     }
 }
