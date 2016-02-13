@@ -217,6 +217,11 @@
                              "Namespace" : "aws:autoscaling:launchconfiguration",
                              "OptionName" : "EC2KeyName",
                              "Value" : "id_rsa"
+                          },
+                          {
+                             "Namespace" : "aws:autoscaling:launchconfiguration",
+                             "OptionName" : "InstanceType",
+                             "Value" : "t2.micro"
                           }
                ]
             }
