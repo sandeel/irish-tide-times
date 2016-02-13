@@ -4,6 +4,7 @@ import tides.models
 from .models import Tide
 from datetime import date
 from django.views import generic
+from django.core import serializers
 
 class HomePageView(generic.TemplateView):
     """"""
@@ -16,11 +17,7 @@ class LandingPageView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super(generic.TemplateView, self).get_context_data(**kwargs)
-        context['locations'] = sorted(Tide.locations)
-        results =  Tide.objects.all()
-        if not results:
-            tides.models.get_tides()
-            results =  Tide.objects.all()
+        results =  tides.models.get_tides()
         context['results'] = results
         return context
 
@@ -34,10 +31,7 @@ def receive_sms(request):
         location = "Dublin (North Wall)"
 
     if location.lower() in ([x.lower() for x in sorted_locations]):
-        results =  Tide.objects.all().filter(location=location,date=date.today())
-        if not results:
-            tides.models.get_tides()
-            results =  Tide.objects.all().filter(location=location.lower(),date=date.today())
+        results =  tides.models.get_tides().filter(location=location,date=date.today())
 
         tide = results[0]
 
@@ -52,3 +46,7 @@ def receive_sms(request):
     resp.message(message)
 
     return HttpResponse(resp, content_type='text/xml')
+
+def tides_as_json(request):
+    data = serializers.serialize("json", tides.models.get_tides())
+    return HttpResponse(data, content_type='text/json')

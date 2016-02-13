@@ -9,6 +9,11 @@
           "MinLength" : "1",
           "MaxLength" : "41",
           "AllowedPattern" : "[a-zA-Z0-9]*"
+        },
+        "GithubToken" : {
+          "NoEcho" : "true",
+          "Description" : "Oauth token for Github",
+          "Type" : "String"
         }
     },
     "Mappings" : {
@@ -112,7 +117,7 @@
             "Type" : "AWS::EC2::Subnet",
             "Properties" :
             {
-                "AvailabilityZone" : "eu-west-1a",
+                "AvailabilityZone" : "us-east-1b",
                 "CidrBlock" : "10.0.0.0/24",
                 "VpcId" : { "Ref" :  "VPC" },
                 "MapPublicIpOnLaunch" : "true"
@@ -129,7 +134,7 @@
             "Type" : "AWS::EC2::Subnet",
             "Properties" :
             {
-                "AvailabilityZone" : "eu-west-1b",
+                "AvailabilityZone" : "us-east-1c",
                 "CidrBlock" : "10.0.1.0/24",
                 "VpcId" : { "Ref" :  "VPC" },
                 "MapPublicIpOnLaunch" : "true"
@@ -146,7 +151,7 @@
             "Type" : "AWS::EC2::Subnet",
             "Properties" :
             {
-                "AvailabilityZone" : "eu-west-1a",
+                "AvailabilityZone" : "us-east-1b",
                 "CidrBlock" : "10.0.2.0/24",
                 "VpcId" : { "Ref" :  "VPC" }
             }
@@ -162,7 +167,7 @@
             "Type" : "AWS::EC2::Subnet",
             "Properties" :
             {
-                "AvailabilityZone" : "eu-west-1b",
+                "AvailabilityZone" : "us-east-1c",
                 "CidrBlock" : "10.0.3.0/24",
                 "VpcId" : { "Ref" :  "VPC" }
             }
@@ -178,7 +183,7 @@
             "Type" : "AWS::EC2::Instance",
             "Properties" :
             {
-                "ImageId" : "ami-14913f63",
+                "ImageId" : "ami-184dc970",
                 "InstanceType" : "t2.micro",
                 "SourceDestCheck" : "false",
                 "SubnetId" : { "Ref" : "PublicSubnet1" },
@@ -208,7 +213,7 @@
             "Properties" : {
                "ApplicationName" : { "Ref" : "ElasticBeanstalkApplication" },
                "SolutionStackName" : "64bit Amazon Linux 2015.09 v2.0.4 running PHP 5.6",
-               "EnvironmentName": "ProdEnv",
+               "EnvironmentName": "ittProdEnv",
                "OptionSettings" : [
                           {"Namespace" : "aws:ec2:vpc", "OptionName" : "VPCId", "Value" : { "Ref" : "VPC" }},
                           {"Namespace" : "aws:ec2:vpc", "OptionName" : "Subnets", "Value" : { "Fn::Join" : [ ",", [ { "Ref": "PublicSubnet1" }, {"Ref": "PublicSubnet2"} ] ] } },
@@ -228,7 +233,7 @@
                           {
                              "Namespace" : "aws:autoscaling:launchconfiguration",
                              "OptionName" : "EC2KeyName",
-                             "Value" : "feelyd"
+                             "Value" : "id_rsa"
                           },
                           {
                             "Namespace": "aws:elasticbeanstalk:application:environment",

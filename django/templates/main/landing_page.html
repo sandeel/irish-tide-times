@@ -1,0 +1,58 @@
+{% extends "app_base.html" %}
+
+{% block main_content %}
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="page-header">
+                <h1>Tide times for Ireland</h1>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+            <div class="well">
+                Get tides by text message for free. Text one of the locations below to +353 86 1800 340
+            </div>
+            <div class="well">
+                Use the <a href="/api/v1/ireland">API</a> to get tides in JSON format
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="well">
+                <p class="lead">View the project on Github</p>
+                <p><a href = "https://github.com/sandeel/irish-tide-times">https://github.com/sandeel/irish-tide-times</a></p>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table table-striped">
+                <th>Location</th>
+                <th>First Low</th>
+                <th>First High</th>
+                <th>Second Low</th>
+                <th>Second High</th>
+                {% for t in results %}
+                <tr>
+                    <td>{{ t.location }}</td>
+                    <td>{{ t.first_low }}</td>
+                    <td>{{ t.first_high }}</td>
+                    <td>{{ t.second_low }}</td>
+                    <td>{{ t.second_high }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+
+{% endblock main_content %}

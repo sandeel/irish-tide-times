@@ -51,7 +51,9 @@ class Tide(models.Model):
 
 
 def get_tides():
-        
+    if Tide.objects.all():
+        return Tide.objects.all()
+
     url = "http://www.irishtimes.com/weather/tides"
 
     r  = requests.get(url)
@@ -76,25 +78,25 @@ def get_tides():
             if not results.exists():
                 tide = Tide()
                 tide.date = date.today()
-                tide.location = location.lower()
+                tide.location = location
 
                 if first_low:
-                    tide.first_low = first_low 
+                    tide.first_low = first_low
                 else:
                     tide.first_low = None
 
                 if first_high:
-                    tide.first_high = first_high 
+                    tide.first_high = first_high
                 else:
                     tide.first_high = None
 
                 if second_low:
-                    tide.second_low = second_low 
+                    tide.second_low = second_low
                 else:
                     tide.second_low = None
 
                 if second_high:
-                    tide.second_high = second_high 
+                    tide.second_high = second_high
                 else:
                     tide.second_high = None
 
@@ -103,3 +105,4 @@ def get_tides():
             else:
                 print("Already have tide for ",location," today... :)")
 
+    return Tide.objects.all()
