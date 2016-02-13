@@ -197,7 +197,6 @@
             "Type" : "AWS::ElasticBeanstalk::Application",
             "DependsOn" : "NAT",
             "Properties" : {
-               "ApplicationName" : "irish-tide-times"
             }
         },
         "ProdEnv" : {
