@@ -51,8 +51,8 @@ class Tide(models.Model):
 
 
 def get_tides():
-    if Tide.objects.all():
-        return Tide.objects.all()
+    if Tide.objects.all().filter(date=date.today()):
+        return Tide.objects.all().filter(date=date.today())
 
     url = "http://www.irishtimes.com/weather/tides"
 
@@ -105,4 +105,4 @@ def get_tides():
             else:
                 print("Already have tide for ",location," today... :)")
 
-    return Tide.objects.all()
+    return Tide.objects.all().filter(date=date.today())
