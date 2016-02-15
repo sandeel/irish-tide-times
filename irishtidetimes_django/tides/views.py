@@ -5,6 +5,7 @@ from .models import Tide
 from datetime import date
 from django.views import generic
 from django.core import serializers
+import datetime
 
 class HomePageView(generic.TemplateView):
     """"""
@@ -19,6 +20,7 @@ class LandingPageView(generic.TemplateView):
         context = super(generic.TemplateView, self).get_context_data(**kwargs)
         results =  tides.models.get_tides()
         context['results'] = results
+        context['date'] = datetime.datetime.now().date
         return context
 
 def receive_sms(request):
