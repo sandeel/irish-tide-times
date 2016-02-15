@@ -46,10 +46,10 @@
                 {% for t in results %}
                 <tr>
                     <td>{{ t.location }}</td>
-                    <td>{{ t.first_low }}</td>
-                    <td>{{ t.first_high }}</td>
-                    <td>{{ t.second_low }}</td>
-                    <td>{{ t.second_high }}</td>
+                    <td>{{ t.first_low|time:'H:i' }}</td>
+                    <td>{{ t.first_high|time:'H:i' }}</td>
+                    <td>{{ t.second_low|time:'H:i' }}</td>
+                    <td>{{ t.second_high|time:'H:i' }}</td>
                 </tr>
                 {% endfor %}
             </table>
