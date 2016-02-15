@@ -31,7 +31,7 @@ def receive_sms(request):
         location = "Dublin (North Wall)"
 
     if location.lower() in ([x.lower() for x in sorted_locations]):
-        results =  tides.models.get_tides()
+        results =  tides.models.get_tides().filter(location=location,date=date.today())
 
         tide = results[0]
 
