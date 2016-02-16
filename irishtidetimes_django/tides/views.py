@@ -33,8 +33,8 @@ def receive_sms(request):
 
         tide = results[0]
 
-        message = "Tides for %s at location %s\nFirst Low: %s\nFirst High: %s\nSecond Low: %s\nSecond High: %s" % (
-            date.today(), location, tide.first_low, tide.first_high, tide.second_low, tide.second_high)
+        message = "Tides for %s at location %s\nFirst Low: %s:%s\nFirst High: %s:%s\nSecond Low: %s:%s\nSecond High: %s:%s" % (
+            date.today(), location, tide.first_low.hour, tide.first_low.minute, tide.first_high.hour, tide.first_high.minute, tide.second_low.hour, tide.second_low.minute, tide.second_high.hour, tide.second_high.minute)
     else:
         message = "Sorry, can't find tides for that location code. Available location codes are:\n"
         for location in sorted_locations:
