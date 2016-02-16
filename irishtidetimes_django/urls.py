@@ -5,7 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    (r'', include('main.urls')),
+    (r'', include('website.urls')),
     (r'', include('tides.urls')),
     (r'^admin/', include(admin.site.urls)),
 )

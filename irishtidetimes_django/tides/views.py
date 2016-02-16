@@ -7,13 +7,9 @@ from django.views import generic
 from django.core import serializers
 import datetime
 
-class HomePageView(generic.TemplateView):
-    """"""
-    template_name = 'main/home.html'
-
 class LandingPageView(generic.TemplateView):
     """"""
-    template_name = 'main/landing_page.html'
+    template_name = 'website/landing_page.html'
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context

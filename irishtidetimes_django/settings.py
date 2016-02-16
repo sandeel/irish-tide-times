@@ -88,7 +88,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-ROOT_URLCONF = 'main.urls'
+ROOT_URLCONF = 'website.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, "templates"),
@@ -106,7 +106,7 @@ INSTALLED_APPS = (
 
     'django_extensions',
 
-    'main',
+    'website',
     'tides',
 )
 
