@@ -18,8 +18,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tides',
+        'USER': 'tides',
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': 'tides.cdyijlphprte.us-east-1.rds.amazonaws.com:3306',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
