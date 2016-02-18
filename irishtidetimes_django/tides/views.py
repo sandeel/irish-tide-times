@@ -9,7 +9,7 @@ import datetime
 
 class LandingPageView(generic.TemplateView):
     """"""
-    template_name = 'website/landing_page.html'
+    template_name = 'main/landing_page.html'
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
@@ -33,18 +33,8 @@ def receive_sms(request):
 
         tide = results[0]
 
-        message = "Tides for %s at location %s\nFirst Low: %s:%s\nFirst High: %s:%s\nSecond Low: %s:%s\nSecond High: %s:%s" % (
-            date.today(),
-            location,
-            str(tide.first_low.hour).zfill(2),
-            str(tide.first_low.minute).zfill(2),
-            str(tide.first_high.hour).zfill(2),
-            str(tide.first_high.minute).zfill(2),
-            str(tide.second_low.hour).zfill(2),
-            str(tide.second_low.minute).zfill(2),
-            str(tide.second_high.hour).zfill(2),
-            str(tide.second_high.minute).zfill(2),
-            )
+        message = "Tides for %s at location %s\nFirst Low: %s\nFirst High: %s\nSecond Low: %s\nSecond High: %s" % (
+            date.today(), location, tide.first_low, tide.first_high, tide.second_low, tide.second_high)
     else:
         message = "Sorry, can't find tides for that location code. Available location codes are:\n"
         for location in sorted_locations:
