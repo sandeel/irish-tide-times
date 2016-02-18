@@ -9,7 +9,7 @@ import datetime
 
 class LandingPageView(generic.TemplateView):
     """"""
-    template_name = 'main/landing_page.html'
+    template_name = 'website/landing_page.html'
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
