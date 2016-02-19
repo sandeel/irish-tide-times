@@ -22,7 +22,7 @@ DATABASES = {
         'NAME': 'tides',
         'USER': 'tides',
         'PASSWORD': os.environ.get('DB_PASS'),
-        'HOST': 'tides.cdyijlphprte.us-east-1.rds.amazonaws.com',   # Or an IP Address that your DB is hosted on
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': '3306',
     }
 }
