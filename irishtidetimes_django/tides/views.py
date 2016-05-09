@@ -35,12 +35,12 @@ def receive_sms(request):
     if location.lower() in ([x.lower() for x in sorted_locations]):
         results =  tides.models.get_tides()
 
-    for t in results:
-        if t.location == location.lower():
-            tide = t
+        for t in results:
+            if t.location == location.lower():
+                tide = t
 
         message = "Tides for %s at location %s\nFirst Low: %s\nFirst High: %s\nSecond Low: %s\nSecond High: %s" % (
-            date.today(), location, tide.first_low, tide.first_high, tide.second_low, tide.second_high)
+                date.today(), location, tide.first_low, tide.first_high, tide.second_low, tide.second_high)
     else:
         message = "Sorry, can't find tides for that location code. Available location codes are:\n"
         for location in sorted_locations:
