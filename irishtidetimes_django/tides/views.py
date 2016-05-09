@@ -15,7 +15,6 @@ class LandingPageView(generic.TemplateView):
         # Call the base implementation first to get a context
         context = super(generic.TemplateView, self).get_context_data(**kwargs)
         results =  tides.models.get_tides()
-        print results[0].first_low
         context['results'] = results
         context['date'] = datetime.datetime.now().date
         return context
