@@ -51,9 +51,6 @@ class Tide(models.Model):
 
 
 def get_tides():
-    if Tide.objects.all().filter(date=date.today()):
-        return Tide.objects.all().filter(date=date.today())
-
     url = "http://www.irishtimes.com/weather/tides"
 
     r  = requests.get(url)
@@ -61,6 +58,8 @@ def get_tides():
     data = r.text
 
     soup = BeautifulSoup(data)
+
+    tides=[]
 
     for td in soup.find_all('td'):
         if td.getText() in Tide.locations:
@@ -74,35 +73,30 @@ def get_tides():
             second_low = tds[3].text
             second_high = tds[4].text
 
-            results =  Tide.objects.all().filter(location=location,date=date.today())
-            if not results.exists():
-                tide = Tide()
-                tide.date = date.today()
-                tide.location = location
+            tide = Tide()
+            tide.date = date.today()
+            tide.location = location
 
-                if first_low:
-                    tide.first_low = first_low
-                else:
-                    tide.first_low = None
-
-                if first_high:
-                    tide.first_high = first_high
-                else:
-                    tide.first_high = None
-
-                if second_low:
-                    tide.second_low = second_low
-                else:
-                    tide.second_low = None
-
-                if second_high:
-                    tide.second_high = second_high
-                else:
-                    tide.second_high = None
-
-                print("Saving tide for ",location,"... :)")
-                tide.save()
+            if first_low:
+                tide.first_low = first_low
             else:
-                print("Already have tide for ",location," today... :)")
+                tide.first_low = None
 
-    return Tide.objects.all().filter(date=date.today())
+            if first_high:
+                tide.first_high = first_high
+            else:
+                tide.first_high = None
+
+            if second_low:
+                tide.second_low = second_low
+            else:
+                tide.second_low = None
+
+            if second_high:
+                tide.second_high = second_high
+            else:
+                tide.second_high = None
+
+            tides.append(tide)
+
+    return tides

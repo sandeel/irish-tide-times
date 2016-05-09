@@ -16,6 +16,7 @@ ADMINS = []
 
 MANAGERS = ADMINS
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -25,6 +26,16 @@ DATABASES = {
         'HOST': os.environ.get('DB_HOST'),
         'PORT': '3306',
     }
+}
+"""
+
+DATABASES = {
+    'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': 'mydatabase',
+
+    }
+
 }
 
 # Language code for this installation. All choices can be found here:
