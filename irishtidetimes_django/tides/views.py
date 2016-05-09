@@ -32,7 +32,7 @@ def receive_sms(request):
         results =  tides.models.get_tides()
 
     for t in results:
-        if t.location == location:
+        if t.location == location.lower():
             tide = t
 
         message = "Tides for %s at location %s\nFirst Low: %s\nFirst High: %s\nSecond Low: %s\nSecond High: %s" % (
