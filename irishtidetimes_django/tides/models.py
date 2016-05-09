@@ -7,14 +7,7 @@ from datetime import date
 class Tide(models.Model):
 
     def __str__(self):
-        return self.location + " - " + self.date.strftime("%B %d, %Y")
-
-    date = models.DateField()
-    location = models.CharField(max_length=20)
-    first_low= models.TimeField(null=True)
-    first_high= models.TimeField(null=True)
-    second_low= models.TimeField(null=True)
-    second_high= models.TimeField(null=True)
+        return self.location + " - " + self.date
 
     locations = {
             "Dublin (North Wall)",

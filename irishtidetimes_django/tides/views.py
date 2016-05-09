@@ -29,9 +29,11 @@ def receive_sms(request):
         location = "Dublin (North Wall)"
 
     if location.lower() in ([x.lower() for x in sorted_locations]):
-        results =  tides.models.get_tides().filter(location=location,date=date.today())
+        results =  tides.models.get_tides()
 
-        tide = results[0]
+    for t in results:
+        if t.location == location:
+            tide = t
 
         message = "Tides for %s at location %s\nFirst Low: %s\nFirst High: %s\nSecond Low: %s\nSecond High: %s" % (
             date.today(), location, tide.first_low, tide.first_high, tide.second_low, tide.second_high)
