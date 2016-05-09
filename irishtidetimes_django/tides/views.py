@@ -27,6 +27,8 @@ def receive_sms(request):
 
     results = []
 
+    tide = None
+
     if location.lower() == "dublin":
         location = "Dublin (North Wall)"
 
