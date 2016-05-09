@@ -25,6 +25,8 @@ def receive_sms(request):
 
     sorted_locations = sorted(Tide.locations)
 
+    results = []
+
     if location.lower() == "dublin":
         location = "Dublin (North Wall)"
 
